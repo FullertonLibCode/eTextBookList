@@ -1,6 +1,10 @@
 from flask import Flask, render_template,request,escape
 import pandas as pd
 
+books_df = pd.read_excel('TextbooksPurchasedByLibrary2019Fall.xlsm',header=0)
+books_subset = books_df[['Course Code','Instructor Name','Long Title','permalink']]
+books = books_df[['Course Code','Instructor Name','Long Title','permalink']].to_dict('records')
+print(books_subset)
 app = Flask(__name__)
 
 def log_request(req, res):
@@ -24,8 +28,8 @@ def log_request(req, res):
 @app.route('/')
 @app.route('/entry')
 def entry_page()->'html':
-    books=[{'course':'test','instructor':'John Smith','docid':'01CALS_ALMA71395997940002901&','title':'Sovereignty of quiet beyond resistance in Black culture'}]
-
+    books_df = pd.read_excel('TextbooksPurchasedByLibrary2019Fall.xlsm',header=0)
+    books = books_df[['Course Code','Instructor Name','Long Title','permalink']].to_dict('records')
     return render_template('row.html',the_title='Welcome to letter search on the web', the_books=books)
 
 
