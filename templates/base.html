@@ -7,8 +7,46 @@
     <title>{{the_title}}</title>
 </head>
 <body>
-    {% block body %}
+        <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                <div class="field-items">
+                   <div class="field-item even">
+                      <div id="datatable_wrapper" class="dataTables_wrapper no-footer">
+                         <table id="datatable"
+                                class="dataTable no-footer"
+                                role="table"
+                                aria-label="Textbooks available as Library eBooks">
+                            <thead>
+                               <tr role="row">
+                                  <th class="sorting_asc"
+                                      style="width: 100px;"
+                                      colspan="1"
+                                      rowspan="1"
+                                      role="columnheader"
+                                      aria-controls="datatable"
+                                      aria-sort="ascending"
+                                      aria-label="Department: activate to sort column descending">Department_Section</th>
+                                  <th class="sorting"
+                                      style="width: 131px;"
+                                      colspan="1"
+                                      rowspan="1"
+                                      role="columnheader"
+                                      aria-controls="datatable"
+                                      aria-label="Professor: activate to sort column ascending">Professor</th>
+                                  <th class="sorting"
+                                      style="width: 496px;"
+                                      colspan="1"
+                                      rowspan="1"
+                                      role="columnheader"
+                                      aria-controls="datatable"
+                                      aria-label="Book Title: activate to sort column ascending">Book Title</th>
+                               </tr>
+                            </thead>
+                            <tbody>
+
+    {% block row %}
     
     {% endblock %}
+    </tbody>
+    </table>
 </body>
 </html>

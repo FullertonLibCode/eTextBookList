@@ -1,5 +1,0 @@
-<Request 'http://127.0.0.1:5000/search4' [POST]> {'o', 'e', 'i'}
-<Request 'http://127.0.0.1:5000/search4' [POST]> {'i', 'e', 'o'}
-ImmutableMultiDict([('phrase', 'all good things must end'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0) Gecko/20100101 Firefox/68.0|{'u', 'o', 'a', 'i', 'e'}
-ImmutableMultiDict([('phrase', 'tewt'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36|{'e'}
-ImmutableMultiDict([('phrase', 'tewt'), ('letters', 'aeiou')])|127.0.0.1|Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36|{'e'}

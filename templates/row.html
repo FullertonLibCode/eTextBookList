@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block row %}
+{% for book_row in the_books %}
+<tr role="row">
+        <td role="cell" data-sheets-value="{&#34;1&#34;:2,&#34;2&#34;:&#34;{{the_course}}&#34;}">{{book_row['course']}}</td>
+        <td role="cell" data-sheets-value="{&#34;1&#34;:2,&#34;2&#34;:&#34;{{the_instructor}}&#34;}">{{book_row['instructor']}}</td>
+        <td role="cell"
+            data-sheets-value="{&#34;1&#34;:2,&#34;2&#34;:&#34;Sovereignty of quiet beyond resistance in Black culture /&#34;}"
+            data-sheets-formula="=HYPERLINK(&#34;https://csuf-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid={{book_row['docid']}}&amp;context=L&amp;vid=01CALS_FUL&amp;search_scope=01CALS_FUL&amp;tab=books_local&amp;lang=en_US&#34;,&#34;{{book_row['title']}} /&#34;)">
+           <a href="https://csuf-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid={{book_row['docid']}}&amp;context=L&amp;vid=01CALS_FUL&amp;search_scope=01CALS_FUL&amp;tab=books_local&amp;lang=en_US"
+              target="_blank"
+              class="in-cell-link"
+              onClick="return UnderstandUsage('https://csuf-primo.hosted.exlibrisgroup.com/primo-explore/fulldisplay?docid=01CALS_ALMA71395997940002901&amp;context=L&amp;vid=01CALS_FUL&amp;search_scope=01CALS_FUL&amp;tab=books_local&amp;lang=en_US', '{{book_row['title']}}', 'content link outbound', 'click');"
+              onfocus="Navigation_CloseExtendedMainNav()">Sovereignty of quiet beyond resistance in Black culture / 
+<img src="//www.library.fullerton.edu/_resources/images/icons/_new_window_icon.png" class="linkicon"  alt="Opens in new window" title="Opens in new window" />					</a>
+        </td>
+     </tr>
+     {% endfor %}
+{% endblock row %}
