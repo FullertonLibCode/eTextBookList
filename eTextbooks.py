@@ -1,10 +1,6 @@
 from flask import Flask, render_template,request,escape
 import pandas as pd
 
-books_df = pd.read_excel('TextbooksPurchasedByLibrary2019Fall.xlsm',header=0)
-books_subset = books_df[['Course Code','Instructor Name','Long Title','permalink']]
-books = books_df[['Course Code','Instructor Name','Long Title','permalink']].to_dict('records')
-print(books_subset)
 app = Flask(__name__)
 
 def log_request(req, res):
