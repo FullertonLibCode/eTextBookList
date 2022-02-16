@@ -24,8 +24,8 @@ def log_request(req, res):
 @app.route('/')
 @app.route('/entry')
 def entry_page()->'html':
-    books_df = pd.read_excel('TextbooksPurchasedByLibrary2019Fall.xlsm',header=0)
-    books = books_df[['Course Code','Instructor Name','Long Title','permalink']].to_dict('records')
+    books_df = pd.read_excel('Ebook Match with Bookstore Spring 2022.xlsx',header=0,sheet_name="Ebook Library Match")
+    books = books_df[['Section Code','Instructor Name','Short Title','Permalink']].sort_values("Section Code").to_dict('records')
     return render_template('row.html',the_title='Welcome to letter search on the web', the_books=books)
 
 

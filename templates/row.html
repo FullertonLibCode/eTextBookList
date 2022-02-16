@@ -2,16 +2,12 @@
 {% block row %}
 {% for book_row in the_books %}
 <tr role="row">
-        <td role="cell" data-sheets-value="{&#34;1&#34;:2,&#34;2&#34;:&#34;{{the_course}}&#34;}">{{book_row['Course Code']}}</td>
-        <td role="cell" data-sheets-value="{&#34;1&#34;:2,&#34;2&#34;:&#34;{{the_instructor}}&#34;}">{{book_row['Instructor Name']}}</td>
-        <td role="cell"
-            data-sheets-value="{&#34;1&#34;:2,&#34;2&#34;:&#34;Sovereignty of quiet beyond resistance in Black culture /&#34;}"
-            data-sheets-formula="=HYPERLINK(&#34;{{book_row['permalink']}}&#34;;,&#34;{{book_row['Long Title']}} /&#34;)">
-           <a href="{{book_row['permalink']}}"
-              target="_blank"
-              class="in-cell-link"
-              onfocus="Navigation_CloseExtendedMainNav()">{{book_row['Long Title']}} 
-<img src="//www.library.fullerton.edu/_resources/images/icons/_new_window_icon.png" class="linkicon"  alt="Opens in new window" title="Opens in new window" />					</a>
+        <td role="cell">{{book_row['Section Code']}}</td>
+        <td role="cell">{{book_row['Instructor Name']}}</td>
+        <td role="cell">
+           <a href="{{book_row['Permalink']}}"
+              target="_blank">{{book_row['Short Title']}} 
+</a>
         </td>
      </tr>
      {% endfor %}
