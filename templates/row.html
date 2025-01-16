@@ -2,11 +2,11 @@
 {% block row %}
 {% for book_row in the_books %}
 <tr role="row">
-        <td role="cell">{{book_row['Section Code']}}</td>
-        <td role="cell">{{book_row['Instructor Name']}}</td>
+        <td role="cell">{{book_row['SectionCode']}}</td>
+        <td role="cell">{{book_row['Instructor']}}</td>
         <td role="cell">
-           <a href="{{book_row['Permalink']}}"
-              target="_blank">{{book_row['Short Title']}} 
+           <a href="{{book_row['URL']}}"
+              target="_blank">{{book_row['Title']}} 
 </a>
         </td>
      </tr>
